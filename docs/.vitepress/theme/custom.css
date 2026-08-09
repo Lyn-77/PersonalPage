@@ -1,0 +1,5 @@
+.image-container .image-src {
+    width: fit-content;
+    object-fit: cover;
+    border-radius: 50%;
+}
