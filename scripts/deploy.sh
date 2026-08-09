@@ -10,7 +10,7 @@ set -eu
 
 # 仓库根目录：无论从何处触发，都精确推导
 ROOT=$(git rev-parse --show-toplevel)
-DEST="${DEPLOY_DEST:-$ROOT/../rainLyn.github.io}"
+DEST="${DEPLOY_DEST:-$ROOT/../Lyn-77.github.io}"
 
 # 只部署 main 分支，避免误把临时分支内容推上线上站点
 [ "$(git branch --show-current)" = main ] || { echo "[deploy] 非 main 分支，跳过"; exit 0; }
