@@ -1,4 +1,4 @@
-# ProMentor
+# [ProMentor](https://github.com/Lyn-77/ProMentor)
 
 > 把任意开源项目转成 MIT 风格的动手工程课程 在实践中学习
 
@@ -8,13 +8,37 @@ ProMentor 是一个 **AI Coding Agent Skill**。装上它，你的 AI 编程助�
 
 ## 安装
 
-将 `promentor.md` 复制到 `.{YourAgent}/skills/promentor` 目录
+### 方式一：从 Release 解压（推荐）
 
-不需要安装任何依赖。不需要数据库。ProMentor 只是告诉 AI 怎么当一个好老师。
+1. 前往 [Releases](https://github.com/Lyn-77/ProMentor/releases) 下载最新 `promentor-skill-<版本>.zip`
+2. 解压后把 `promentor/` 放到 `.{YourAgent}/skills/promentor`
+
+### 方式二：从源码构建
+
+需要 Node.js 与 pnpm：
+
+```bash
+cd dashboard
+pnpm install
+pnpm build:dashboard
+```
+
+然后，将整个 `skills/promentor/` 目录复制到 `.{YourAgent}/skills/promentor`
+（构建产物会自动输出到 `skills/promentor/dashboard/`）
+
+运行时仅需 Python 3 标准库
+
+### 同步到本机已安装副本（Codex）
+
+仓库 `skills/promentor/` 是唯一事实来源。修改后同步到 Codex 技能目录：
+
+```bash
+rsync -a --delete skills/promentor/ ~/.agents/skills/promentor/
+```
 
 ## 使用
 
-在 Claude Code 中打开你的项目，然后：
+在 Codex、Claude Code 等支持 `/promentor` 命令的 AI 编程助手中打开你的项目，然后：
 
 ### 1. 生成课程
 
@@ -71,6 +95,40 @@ AI 对比你的实现 vs 原始源码，解释设计决策、"为什么这样做
 /promentor progress # 详细进度
 ```
 
+### 8. 查看仪表盘（网页 Dashboard）
+
+```
+/promentor dashboard
+```
+
+自动读取 `.promentor/` 下生成的课程数据，浏览器网页与 Agent 对话双通道查看。
+
+**功能**
+
+- 主页概览：总体完成度、当前学习章节、已完成/学习中/未开始统计、每章状态/分数/尝试次数、内容完整性警告
+- 章节独立页面：`/dashboard/chapters/<chapter_id>/` 直达任意章节，可刷新、可分享
+- 左侧边栏：一键切换讲义（Lecture）与源码导读（Source）
+- 主题切换：右上角按钮在浅色/深色模式间切换
+- Markdown 增强渲染：代码语法高亮、Mermaid 图、数学公式、CJK 排版（Streamdown）
+
+**自动启动**
+
+`/promentor init` 结束与 `/promentor learn <ch>` 开始时，会自动启动仪表盘并输出访问地址——Agent 对话与浏览器网页都能查看。
+
+**架构**
+
+- 全局单进程：重复启动复用已有进程，在另一个项目学习时自动切换
+- 网页只存在于技能包 `dashboard/` 内，不复制到项目目录；服务启动时读取项目根目录的 `.promentor/` 数据
+
+使用方式：
+
+```
+cd /path/to/project
+python3 <promentor-skill>/scripts/serve.py          # 启动并打开浏览器
+python3 <promentor-skill>/scripts/serve.py status   # 查看运行进程
+python3 <promentor-skill>/scripts/serve.py stop     # 停止
+```
+
 ## 命令速查
 
 | 命令 | 说明 |
@@ -83,6 +141,7 @@ AI 对比你的实现 vs 原始源码，解释设计决策、"为什么这样做
 | `/promentor submit` | 正式提交，锁定成绩 |
 | `/promentor review` | 对比实现 vs 原始源码 |
 | `/promentor progress` | 查看总进度 |
+| `/promentor dashboard` | 课程仪表盘（完成度 + 当前学习 + 内容完整性） |
 
 ## 学习模型
 

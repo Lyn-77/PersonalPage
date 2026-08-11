@@ -1,4 +1,4 @@
-# WakeUp
+# [WakeUp](https://github.com/Lyn-77/WakeUp)
 
 > 终端里的 Wake-on-LAN 工具 —— 快速、纯键盘、单文件。
 

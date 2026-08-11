@@ -1,4 +1,4 @@
-# FocusPulse
+# [FocusPulse](https://github.com/Lyn-77/FocusPulse)
 
 专注计时 + 每日时间统计，一款极简的 iOS 专注力工具。
 
