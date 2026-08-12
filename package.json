@@ -7,6 +7,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "packageManager": "pnpm@11.18.0",
   "dependencies": {
     "@catppuccin/vitepress": "^0.1.2"
   }

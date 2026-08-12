@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "Lyn-77",
     description: "",
+    base: '/',
     head: [
         ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ],
