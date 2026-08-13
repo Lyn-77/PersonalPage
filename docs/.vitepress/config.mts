@@ -6,7 +6,7 @@ export default defineConfig({
     description: "",
     base: '/PersonalPage/',
     head: [
-        ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+        ['link', { rel: 'icon', type: 'image/png', href: '/PersonalPage/favicon.png' }],
     ],
     markdown: {
         theme: {
@@ -41,7 +41,7 @@ export default defineConfig({
             {
                 text: '',
                 items: [
-                    { text: 'Contact Me', link: '/contact' },
+                    { text: 'Contact', link: '/contact' },
                 ]
             },
         ],

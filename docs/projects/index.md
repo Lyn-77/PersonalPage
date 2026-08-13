@@ -16,20 +16,3 @@ ProMentor 是一个 **AI Coding Agent Skill**。装上它，你的 AI 编程助�
 ![WakeUpPreview](/WakeUp-preview.png)
 
 WakeUp 是一个基于 [Bubble Tea](https://github.com/charmbracelet/bubbletea) 的 TUI 应用，用于管理设备并发送网络唤醒魔术包。设备数据本地存储，按键操作遵循 Vim 习惯，界面主题自动适配终端亮/暗模式。
-
-
-## [FocusPulse](/projects/FocusPulse)
-> 专注计时 + 每日时间统计，一款极简的 iOS 专注力工具。
-
-<div align="center">
-    <img alt="FocusPulsePreview" src="/FocusPulse-preview.png" width=45% />
-</div>
-
-### 功能
-
-- 自由模式专注计时，按分类记录每次专注
-- 自动生成当日时间分布饼图
-- 日历热力图，回顾专注历史
-- 自定义专注分类
-- 导出 CSV 数据
-- 灵动岛与锁屏实时活动，计时进度抬手可见
