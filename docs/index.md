@@ -14,8 +14,5 @@ hero:
     - theme: alt
       text: Projects
       link: /projects/index
-    - theme: alt
-      text: Contact
-      link: /contact
 ---
 
