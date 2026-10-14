@@ -6,7 +6,7 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["vitepress/client"]
+    "types": ["vitepress/client", "node"]
   },
   "include": ["**/*.ts", "**/*.mts", "**/*.d.ts"]
 }

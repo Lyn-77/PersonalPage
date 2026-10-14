@@ -17,6 +17,5 @@ hero:
     - theme: alt
       text: Contact
       link: /contact
-
 ---
 
