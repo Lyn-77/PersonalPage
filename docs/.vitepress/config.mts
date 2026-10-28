@@ -37,8 +37,6 @@ export default defineConfig({
         socialLinks: [
             { icon: 'github', link: 'https://github.com/Lyn-77' },
             { icon: 'leetcode', link: 'https://leetcode.cn/u/Lyn-77' },
-            { icon: 'tiktok', link: 'https://v.douyin.com/EBbctOWqOUU/' },
-            { icon: 'bilibili', link: 'https://space.bilibili.com/39121400' },
         ]
     },
 })
