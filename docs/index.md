@@ -9,9 +9,6 @@ hero:
     src: /img.jpg
   actions:
     - theme: brand
-      text: Blogs
-      link: /blogs/index
-    - theme: alt
       text: Projects
       link: /projects/index
 ---
